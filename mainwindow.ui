@@ -14,114 +14,68 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>91</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>m3u8 url:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>350</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>run</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>60</y>
-      <width>351</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>input download number: (default number 300)</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_url">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>20</y>
-      <width>411</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>http://192.168.0.109/hls.live/bbc_news24.m3u8</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_num">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>60</y>
-      <width>141</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>300</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>100</y>
-      <width>351</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>file saved to  </string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_path">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>100</y>
-      <width>141</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>/home/lijinbo/Downloads/test</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="text_progress">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>150</y>
-      <width>511</width>
-      <height>181</height>
-     </rect>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit_num">
+      <property name="text">
+       <string>300</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>file saved to  </string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lineEdit_path">
+      <property name="text">
+       <string>/home/lijinbo/Downloads/test</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QTextEdit" name="text_progress">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu';&quot;&gt;pogresss tips ...   //TO BE DONE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-weight:600;&quot;&gt;------------pogresss --------------&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>input download number: (default number 300)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>m3u8 url:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="lineEdit_url">
+      <property name="text">
+       <string>http://192.168.0.109/hls.live/bbc_news24.m3u8</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2" alignment="Qt::AlignRight">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>run</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
