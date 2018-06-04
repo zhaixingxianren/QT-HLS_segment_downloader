@@ -45,13 +45,14 @@ signals:
     void errorEv(void);
     void timeoutEv(void);
 
+public:
+    QNetworkAccessManager  manager;
 private:
     QVector<QUrl> url_list;
     QVector<QNetworkReply *> currentDownloads;
     QString basePath;
     QString response_code {"no response"};
 
-    QNetworkAccessManager  manager;
     int max_num {300} , downloaded_num{0};
 };
 

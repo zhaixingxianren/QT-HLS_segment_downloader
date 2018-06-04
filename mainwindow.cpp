@@ -39,6 +39,13 @@ void MainWindow::start_process()
     downloader.startRequest();
 
     connect(&downloader, SIGNAL(finishedEv(QString)),&hls_parser,SLOT(got_m3u8_file(QString)) );
+    connect(&downloader.manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(updateInfo(QNetworkReply *)));
 }
 
 
+void MainWindow::updateInfo(QNetworkReply *reply)
+{
+    QString text = ui->text_progress->toPlainText();
+    QString attach ="\n" + reply->url().toString() + " return " +reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toString();
+    ui->text_progress->setText(text + attach);
+}

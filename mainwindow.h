@@ -22,7 +22,7 @@ public:
 private slots:
     void on_pushButton_clicked();
     void start_process();
-
+    void updateInfo(QNetworkReply *reply);
 
 private:
     Ui::MainWindow *ui;
